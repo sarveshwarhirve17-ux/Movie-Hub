@@ -1,0 +1,231 @@
+
+
+nav{
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 40px;
+    background-color: black;
+    color: white;
+}
+
+nav button{
+    background-color: black;
+    color: white;
+    height: 40px;
+    width: 100px;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: 0.3s;
+
+
+}
+button:hover{
+    color: yellow;
+    transform: scale(1.1);    
+}
+
+
+
+.logo{
+    font-size: 30px;
+    font-weight: bold;
+    font-style: italic;
+    cursor: pointer;
+    color: orange;
+    transition: 0.3s;
+}
+.logo:hover{
+    color: yellow;
+    transform: scale(1.1);
+}
+
+
+
+ul{
+    display: flex;
+    justify-content: space-around;
+    gap: 25px;
+    align-items: center;
+    cursor: pointer;
+    list-style: none;
+    transition: 0.3s;
+}
+
+ul li{
+    font-size: 25px;
+}
+
+
+ul li:hover{
+    color: yellow;
+    transform: scale(1.1);
+}
+
+.hero{
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+    padding: 40px;
+    background-color: black;
+    color: white;
+}
+.hero-content h1{
+    color: lightblue;
+    font-size: 48px;
+}
+.hero-content p{
+    color: lightblue;
+    font-size: 30px;
+}
+.hero-content input{
+    padding: 10px;
+    height: 20px; 
+    width: 350px;  
+}
+.hero-content input:hover{
+    transition: 0.3s;
+    color: orange;
+    transform: scale(1.1);
+}
+.hero-content button{
+    padding: 10px 20px;
+    border-radius: 10px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.hero-content button:hover{
+   
+    color: orange;
+    transform: scale(1.1);
+}
+
+.hero img{
+    height: 350px;
+    width: 700px;
+    border-radius: 10px;
+}
+
+.movie-card{
+    display: flex;
+    justify-content:space-around;
+    background-color: black;
+    color: white;
+}
+
+.movie-card img{
+    width: 220px;
+    height: 320px;
+    border-radius: 10px;
+}
+
+.movie-card img:hover{
+    transform: scale(1.05);
+    transition: .3s;
+}
+
+.trending h2{
+    margin: 0;
+    padding: 20px 0;
+    text-align: center;
+    color: blueviolet;
+    font-style: italic;
+    /* background-color: black; */
+}
+.trending h2:hover{
+    transform: scale(1.03);
+    transition: 0.3s;
+    color: aqua;
+}
+
+.trending{
+    background-color: black;
+    color: white;
+    font-size: 30px;   
+}
+
+
+.movie-card h3{
+    margin-top: 100px;
+    align-items: center;
+    color: blue;
+    font-size: 30px;
+    font-weight: bold;
+
+}
+
+.movie-card p{
+    margin-top: 100px;
+    align-items: center;
+    color: blue;
+    font-size: 26px;
+}
+
+.reviews{
+    background-color: black;
+
+}
+
+.review-card{
+    color: white;
+    /* margin-bottom: 40px; */
+}
+
+.review-card h3{
+    font-size: 30px;
+    color: aqua;
+}
+.review-card h4{
+    font-size: 25px;
+    color: rgb(110, 16, 224);
+    margin-left: 25px;
+}
+.review-card p{
+    font-size: 22px;
+    color: rgb(54, 183, 226);
+    margin: 0;
+    margin-bottom: 0;
+    margin-left: 25px;
+}
+
+footer{
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    background-color: black;
+    color: white;
+}
+
+footer h3{
+    font-size: 30px;
+    font-style: italic;
+    color: orange;
+    margin-top: 40px;
+}
+
+footer li{
+    justify-content: space-between ;
+    font-size: 20px;
+    list-style: none;
+}
+
+footer p{
+    font-size: 20px;
+}
+
+footer h3:hover{
+    transform: scale(1.03);
+    transition: 0.3s;
+    color: yellow;
+}
+
+footer li:hover{
+    transform: scale(1.03);
+    transition: 0.3s;
+    color: yellow;
+}
+
+
+
