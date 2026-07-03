@@ -27,8 +27,9 @@
             <h1>Discover Amazing Movies</h1>
             <p>Find reviews,rating and discover your next favorite movie</p>
 
-            <input type="text" placeholder="Search Movie...">
-            <button>Search</button>
+            <input type="text" placeholder="Search Movie..." id="input">
+            <button id="search">Search</button>
+            <p id="message"></p>
         </div>
 
         <div class="hero-image">
@@ -41,13 +42,13 @@
     <section class="trending">
         <h2>Trending Movies</h2>
         <div class="movie-container">
-            <div class="movie-card">
+            <div id="movie-card" class="movie-card">
                 <img src="images/interstellar.jpeg" alt="interstellar">
                 <h3>Interstellar</h3>
                 <p>⭐9.0</p>
                 <p>Sci-Fi</p>
             </div>
-            <div class="movie-card">
+            <div  class="movie-card">
                 <img src="images/Inception.jpeg" alt="inception">
                 <h3>Inception</h3>
                 <p>⭐8.8</p>
@@ -128,7 +129,7 @@
 
     </section>
 
-    <footer>
+<footer>
         <h3>Movie Hub</h3>
         <p>Your Ultimate Movie Review Platform</p>
         <!-- <p>Home | Movies | Review | About</p> -->
@@ -140,7 +141,9 @@
         </ul>
         <p>@ 2026 MovieHub. All Rights Reserved</p>
 
-    </footer>
+</footer>
+
+<script src="script.js"></script>
 
 </body>
 
