@@ -7,7 +7,7 @@ let movieName = document.getElementById("movieName");
 
 let movies = [];
 
-fetch("http://127.0.0.1:8000/movies")
+fetch("https://movie-hub-a9s5.onrender.com/movies")
 .then(response => response.json())
 .then(data => {
     movies = data;
