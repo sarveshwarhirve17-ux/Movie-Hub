@@ -1,43 +1,66 @@
-let input = document.getElementById("input")
-let search = document.getElementById("search")
-let card = document.getElementsByClassName("movie-card")
-let message = document.getElementById("message")
+let input = document.getElementById("input");
+let search = document.getElementById("search");
+let card = document.getElementsByClassName("movie-card");
+let message = document.getElementById("message");
+let movieName = document.getElementById("movieName");
 
-search.addEventListener("click",function(){
-    if(input.value == ""){
-        for(let i = 0; i < card.length;i++){
-            card[i].style.display = "flex"
+let movies = [];
+
+fetch("http://127.0.0.1:8000/movies")
+.then(response => response.json())
+.then(data => {
+    movies = data;
+});
+
+search.addEventListener("click", function () {
+
+    if (input.value == "") {
+        for (let i = 0; i < card.length; i++) {
+            card[i].style.display = "flex";
         }
-    message.textContent = "";
-    return    
-    }      
-    let movieName = input.value.toLowerCase();
-    message.textContent = ""
-    for(let i = 0; i < card.length;i++){              // this line will check movie 0 to movie 6 . it check movie card one by one
-        let title = card[i].getElementsByTagName("h3")[0].textContent.toLowerCase();
-        console.log(title);
+        message.textContent = "";
+        movieName.textContent = "";
+        return;
+    }
 
-        if(title == movieName){
-            card[i].style.display = "flex" ;    // this show the search movies only 
+    let userMovie = input.value.toLowerCase();
+
+    let foundMovie = movies.find(function(movie){
+        return movie.name.toLowerCase() == userMovie;
+    });
+
+    if(foundMovie){
+        movieName.textContent = foundMovie.name + " ⭐ " + foundMovie.rating;
+    }
+    else{
+        movieName.textContent = "Movie Not Found";
+    }
+
+    for (let i = 0; i < card.length; i++) {
+
+        let title = card[i]
+            .getElementsByTagName("h3")[0]
+            .textContent
+            .toLowerCase();
+
+        if (title == userMovie) {
+            card[i].style.display = "flex";
             message.textContent = "";
-            break;      
+        } else {
+            card[i].style.display = "none";
         }
-        else{
-            card[i].style.display = "none";           
-            message.textContent = "Movie not Found";        
-        }   
     }
 
-})
+});
 
-input.addEventListener("keypress", function(event){
-    if(event.key == "Enter"){
+input.addEventListener("keypress", function (event) {
+    if (event.key == "Enter") {
         search.click();
     }
-})
+});
 
-input.addEventListener("input", function(){
-    if(input.value == ""){
+input.addEventListener("input", function () {
+    if (input.value == "") {
         search.click();
     }
-})
+});
