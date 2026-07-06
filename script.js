@@ -1,3 +1,4 @@
+alert("Welcome to Movie Hub")
 let input = document.getElementById("input");
 let search = document.getElementById("search");
 let card = document.getElementsByClassName("movie-card");
