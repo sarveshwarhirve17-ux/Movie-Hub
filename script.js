@@ -1,4 +1,4 @@
-alert("Welcome to Movie Hub")
+alert("Welcome to Movie Hub,Made by Sarveshwar Hirve")
 let input = document.getElementById("input");
 let search = document.getElementById("search");
 let card = document.getElementsByClassName("movie-card");
